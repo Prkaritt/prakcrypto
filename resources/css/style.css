@@ -5,6 +5,7 @@
   --color-grey-light-ultra: #eee;
   --color-grey-light: #bbb;
   --color-grey-dark: #666;
+  --color-primary-darkrgb: rgb(7, 79, 60);
 }
 
 /*--------------------Global Properties  --------------------*/
@@ -27,7 +28,11 @@ body {
   font-size: 1.6rem;
 }
 section {
-  padding: 10rem;
+  padding: 5rem;
+}
+
+.mr {
+  margin-right: auto;
 }
 
 /*-------------------- REUSABLE ITEMS  --------------------*/
@@ -45,11 +50,11 @@ h1 {
 h2 {
   font-size: 3.5rem;
   letter-spacing: 1rem;
+  color: var(--color-grey-dark);
 }
 
 .heading_secondary {
   text-align: center;
-  color: var(--color-grey-dark);
 }
 
 h3 {
@@ -117,17 +122,31 @@ nav {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  height: 7rem;
+}
+.nav_items {
+  transition: transform 0.5s, opacity 0.3s, height 0.3s;
 }
 
 .nav_logo {
   display: flex;
+  margin-right: auto;
 }
 
-.nav_logo-icon {
+.nav_logo-icon,
+.app_drawer-icon {
   font-size: 3rem;
   color: var(--color-primary);
+}
+.nav_logo-icon {
   border-right: 3px solid var(--color-primary);
   padding-right: 3rem;
+  margin-right: auto;
+}
+
+.app_drawer {
+  display: none;
 }
 
 .nav_logo_title {
@@ -167,11 +186,78 @@ nav {
   color: var(--color-primary);
   margin-bottom: 2rem;
 }
+.feature_heading {
+  margin-bottom: 2rem;
+}
 
 .feature .feature_description {
   line-height: 145%;
   text-align: center;
   letter-spacing: 1px;
+}
+
+/*--------------------  SPECIAL FEATURE  --------------------*/
+.special_feature {
+  padding: 10rem;
+  background-color: var(--color-primary-dark);
+}
+
+.special_feature_container {
+  max-width: 114rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.special_features_items {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.feature_item {
+  flex: 0 1 50%;
+  margin: 2rem;
+}
+
+.feature_item_title {
+  margin-bottom: 2rem;
+  color: var(--color-grey-dark);
+}
+.feature_item_description {
+  line-height: 145%;
+  color: var(--color-grey-dark);
+}
+
+.feature_item-photo {
+  display: block;
+  margin: 0 auto;
+  height: 25rem;
+  width: 25rem;
+  outline: 3px solid green;
+  outline-offset: 2rem;
+
+  background-image: url(img/coin.jpg);
+  background-size: cover;
+}
+
+/*--------------------  SECTION ABOUT  --------------------*/
+.section_about-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section_about-description {
+  line-height: 145%;
+  max-width: 100rem;
+  margin: 0 auto;
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light-ultra);
+  padding: 3rem;
+  transform: skewX(-7deg);
+}
+
+.section_about-description > * {
+  transform: skewX(7deg);
 }
 
 /*--------------------  FOOTER  --------------------*/
@@ -187,15 +273,31 @@ footer {
   grid-template-columns: repeat(auto-fit, 30rem);
   grid-gap: 6rem;
   justify-content: center;
+  align-items: center;
 }
 
 .footer_description {
   display: flex;
   flex-direction: column;
   line-height: 145%;
+  text-align: center;
 }
 
 .footer_description-name {
   font-size: 2rem;
   letter-spacing: 3px;
+}
+
+.icons {
+  margin-top: 2rem;
+  display: inline-block;
+}
+.footer_icon {
+  font-size: 3rem;
+  margin-right: 2rem;
+  color: #fff;
+}
+
+.footer_right {
+  text-align: center;
 }

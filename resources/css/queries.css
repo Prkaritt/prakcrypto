@@ -7,9 +7,66 @@
   }
 }
 
+@media only screen and (max-width: 850px) {
+  /* FOR SPECIAL FEATURE */
+  .feature_item-photo {
+    margin-top: 3rem;
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   html {
     font-size: 50%;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_items-hide {
+    transform: translate(-150%);
+    opacity: 0;
+  }
+
+  .nav_items-open {
+    height: 20rem;
+    background-image: linear-gradient(
+      to top,
+      var(--color-primary-darkrgb),
+      rgba(0, 0, 0, 0.9)
+    );
+  }
+
+  nav ul li {
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .app_drawer {
+    display: inline-block;
+    margin-left: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* FOR SPECIAL FEATURE */
+  .special_features_items {
+    flex-direction: column;
+  }
+
+  .special_feature h2 {
+    font-size: 3rem;
   }
 }
 
